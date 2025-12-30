@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 
 def convert():
-    print("convert")
+    print(input.get())
 
 # window
 window = tk.Tk()
@@ -15,7 +15,8 @@ title_label.pack()
 
 #input frame
 input_frame = ttk.Frame(master=window)
-input = ttk.Entry(master=input_frame)
+inputInt = tk.IntVar()
+input = ttk.Entry(master=input_frame, textvariable=inputInt)
 button = ttk.Button(master=input_frame, text='convert', command=convert) 
 input.pack(side='left', padx=5)
 button.pack(side='left')
